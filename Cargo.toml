@@ -1,0 +1,24 @@
+[package]
+name = "ya-local-reputation"
+version = "0.1.0"
+authors = ["nieznany.sprawiciel <witek@golem.network>"]
+edition = "2021"
+
+
+[lib]
+crate-type=["rlib", "dylib"]
+
+[dependencies]
+ya-client-model = "0.3"
+
+ya-negotiator-shared-lib-interface = { path = "../ya-negotiators/interfaces/shared-lib" }
+
+abi_stable = "0.9.1"
+anyhow = "^1.0"
+chrono = "0.4"
+humantime = "2"
+humantime-serde = "1"
+serde = "^1.0"
+serde_yaml = "^0.8"
+structopt = "0.3"
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "time"]}
