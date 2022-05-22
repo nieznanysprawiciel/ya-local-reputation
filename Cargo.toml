@@ -18,7 +18,9 @@ anyhow = "^1.0"
 chrono = "0.4"
 humantime = "2"
 humantime-serde = "1"
-serde = "^1.0"
-serde_yaml = "^0.8"
+log = "0.4"
+flexi_logger = { version = "0.22", features = ["use_chrono_for_offset"] }
+serde = "1.0"
+serde_yaml = "0.8"
 structopt = "0.3"
-tokio = { version = "1", features = ["rt", "rt-multi-thread", "time"]}
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "time", "sync"]}
